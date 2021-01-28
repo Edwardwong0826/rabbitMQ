@@ -10,6 +10,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
+// first model, direct link
 public class Provider {
 
     //produce message

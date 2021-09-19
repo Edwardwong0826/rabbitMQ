@@ -18,7 +18,7 @@ public class Consumer2
 
         //based on the route key to bind queue and exchange, 动态通配形式routing key
         // # is  match from 0 or more keyword , the routing key can be like user.xxx.xxx also can
-        // # can be add before and after in routing key
+        // # can be added before and after in routing key
         // can be combined with use with *
         channel.queueBind(queue, exchangeName,"user.#");
 

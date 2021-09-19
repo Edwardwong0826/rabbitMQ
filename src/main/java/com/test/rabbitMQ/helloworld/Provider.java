@@ -38,7 +38,7 @@ public class Provider {
 
         // bind channel to message queue
         // parameter 1: queue name, will auto create on rabbitMQ
-        // parameter 2: to defined the queue is it durable/persistent, true means when MQ close it will save to hard drive
+        // parameter 2: to define the queue is it durable/persistent, true means when MQ close it will save to hard drive
         // parameter 3: is it exclusive on the current queue, other may access this if is false else cannot
         // parameter 4: is it after consumption completed auto delete queue
         // parameter 5： optional added parameter
@@ -50,7 +50,7 @@ public class Provider {
         // parameter 2: route key name
         // parameter 3: pass message extra setting
         // parameter 4: message itself
-        // routing key decided which queue will be publish by this channel for message
+        // routing key decided which queue will be published by this channel for message
         // if want message persistent, need to set in here
         channel.basicPublish("","hello", MessageProperties.PERSISTENT_TEXT_PLAIN, "hello rabbitMQ!".getBytes());
 //        channel.close();

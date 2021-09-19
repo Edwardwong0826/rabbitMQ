@@ -12,7 +12,7 @@ public class Consumer1
         Connection connection = rabbitMQConnection.getConnection();
         final Channel channel = connection.createChannel();
         channel.basicQos(1); // means everytime only consume 1 message
-        // multiple consumer is consume and choose by round rabin
+        // multiple consumer is consumed and choose by round rabin
         channel.queueDeclare("work",true,false,false,null);
 
 

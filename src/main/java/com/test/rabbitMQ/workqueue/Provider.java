@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Provider
 {
     // in this model, producer are sending the message by default ExChange, so we didn't set it/ or no need to set it
-    // message produce by provider it only can be send to ExChange, then ExChange decide send to which queue, producer can't decide
+    // message produce by provider it only can be sent to ExChange, then ExChange decide send to which queue, producer can't decide
     public static void main(String[] args) throws IOException {
         Connection connection = rabbitMQConnection.getConnection();
         Channel channel = connection.createChannel();

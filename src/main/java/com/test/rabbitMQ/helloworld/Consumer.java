@@ -8,12 +8,12 @@ import java.util.concurrent.TimeoutException;
 
 public class Consumer {
     // we can subscribe any salve node that have join with master node, just that master node must be up in normal clustering mode
-    // it only copy the operational information of exchange and queue but not queue inside data
+    // it only copies the operational information of exchange and queue but not queue inside data
 
     // for high availability cluster we need use mirror cluster, to set policy in rabbitMQ machine/docker rabbitmqctl
     // set_policy ha-all '^' '{"ha-mode":"all","ha-sync-mode":"automatic"}' , this can refer to official site what kinds of parameter to set
-    // once we set policy, above example will made all node be mirror , so if master mode down, either node will promoted to main node with all queue data
-    // so we can still consume the message from new promoted main node, when finish consume the message it will be confirm by node. 
+    // once we set policy, above example will make all node be mirrored , so if master mode down, either node will promote to main node with all queue data
+    // so we can still consume the message from new promoted main node, when finish consume the message it will be confirmed by node.
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connectionFactory.setHost("localhost");
